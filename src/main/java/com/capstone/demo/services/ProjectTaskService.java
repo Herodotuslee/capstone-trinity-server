@@ -25,17 +25,15 @@ public class ProjectTaskService {
 
     public ProjectTask addProjectTask(String projectIdentifier, ProjectTask projectTask){
 
-
+        System.out.println("here3");
             Backlog backlog = backlogRepository.findByProjectIdentifier(projectIdentifier);
+        System.out.println("here3-1");
             projectTask.setBacklog(backlog);
-            Integer BacklogSequence = backlog.getPTSequence();
+        System.out.println("here3-2");
 
-            BacklogSequence++;
-            backlog.setPTSequence(BacklogSequence);
-
-            //Add Sequence to Project Task
-            projectTask.setProjectSequence(backlog.getProjectIdentifier()+"-"+BacklogSequence);
+        System.out.println("here5");
             projectTask.setProjectIdentifier(projectIdentifier);
+        System.out.println("here7");
 
             //INITIAL priority when priority null
 

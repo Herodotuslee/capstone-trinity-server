@@ -23,9 +23,9 @@ public class BacklogController {
     @PostMapping("/{backlog_id}")
     public ResponseEntity<?> addPTtoBacklog(@Valid @RequestBody ProjectTask projectTask,@PathVariable String backlog_id){
 
-
+        System.out.println("here1");
         ProjectTask projectTask1 = projectTaskService.addProjectTask(backlog_id, projectTask);
-
+        System.out.println("here2");
         return new ResponseEntity<ProjectTask>(projectTask1, HttpStatus.CREATED);
 
     }
