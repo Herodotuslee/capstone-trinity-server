@@ -27,7 +27,7 @@ public class ProjectTaskService {
 
         System.out.println("here3");
             Backlog backlog = backlogRepository.findByProjectIdentifier(projectIdentifier);
-        System.out.println("here3-1");
+        System.out.println(backlog.toString());
             projectTask.setBacklog(backlog);
         System.out.println("here3-2");
 
