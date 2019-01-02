@@ -9,6 +9,10 @@ import com.capstone.demo.repositories.ProjectTaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+
+import java.util.List;
+
 @Service
 public class ProjectTaskService {
 
@@ -25,54 +29,41 @@ public class ProjectTaskService {
 
     public ProjectTask addProjectTask(String projectIdentifier, ProjectTask projectTask){
 
-        System.out.println("here3");
             Backlog backlog = backlogRepository.findByProjectIdentifier(projectIdentifier);
-        System.out.println(backlog.toString());
             projectTask.setBacklog(backlog);
-        System.out.println("here3-2");
+            Integer BacklogSequence = backlog.getPTSequence();
+            BacklogSequence++;
+            backlog.setPTSequence(BacklogSequence);
 
-        System.out.println("here5");
+            projectTask.setProjectSequence(backlog.getProjectIdentifier()+"-"+BacklogSequence);
             projectTask.setProjectIdentifier(projectIdentifier);
-        System.out.println("here7");
+            if(projectTask.getStatus()==""|| projectTask.getStatus()==null){
+                projectTask.setStatus("TO_DO");
+            }
 
-            //INITIAL priority when priority null
-
-            //INITIAL status when status is null
-//            if(projectTask.getStatus().equals("")|| projectTask.getStatus()==null){
-//                projectTask.setStatus("TO_DO");
-//            }
-//
-//            if(projectTask.getPriority()==null){ //In the future we need projectTask.getPriority()== 0 to handle the form
-//                projectTask.setPriority(3);
-//            }
-
+            if(projectTask.getPriority()== null||projectTask.getPriority()==0){
+                projectTask.setPriority(3);
+            }
             return projectTaskRepository.save(projectTask);
-
     }
 
     public Iterable<ProjectTask>findBacklogById(String id){
 
         Project project = projectRepository.findByProjectIdentifier(id);
-
         return projectTaskRepository.findByProjectIdentifierOrderByPriority(id);
     }
 
 
     public ProjectTask findPTByProjectSequence(String backlog_id, String pt_id){
 
-        //make sure we are searching on an existing backlog
         Backlog backlog = backlogRepository.findByProjectIdentifier(backlog_id);
-
-
-        //make sure that our task exists
         ProjectTask projectTask = projectTaskRepository.findByProjectSequence(pt_id);
-
-
 
         return projectTask;
     }
 
     public ProjectTask updateByProjectSequence(ProjectTask updatedTask, String backlog_id, String pt_id){
+
         ProjectTask projectTask = findPTByProjectSequence(backlog_id, pt_id);
         projectTask = updatedTask;
         return projectTaskRepository.save(projectTask);

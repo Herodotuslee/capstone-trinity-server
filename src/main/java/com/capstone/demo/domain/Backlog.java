@@ -28,8 +28,6 @@ public class Backlog {
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "backlog", orphanRemoval = true)
     private List<ProjectTask> projectTasks = new ArrayList<>();
 
-
-
     public Backlog() {
     }
 
