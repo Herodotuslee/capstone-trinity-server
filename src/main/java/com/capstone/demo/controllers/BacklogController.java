@@ -37,10 +37,12 @@ public class BacklogController {
     }
 
     @GetMapping("/{backlog_id}/{pt_id}")
-    public ResponseEntity<?> getProjectTask(@PathVariable String backlog_id, @PathVariable String pt_id){
-        ProjectTask projectTask = projectTaskService.findPTByProjectSequence(backlog_id, pt_id);
-        return new ResponseEntity<ProjectTask>( projectTask, HttpStatus.OK);
+    public ResponseEntity<ProjectTask> getProjectTask(@PathVariable String backlog_id, @PathVariable long pt_id){
+        ProjectTask projectTask = projectTaskService.findPTByProjectID(backlog_id, pt_id);
+        return new ResponseEntity<ProjectTask>(projectTask, HttpStatus.OK);
     }
+
+
 
 
     @PatchMapping("/{backlog_id}/{pt_id}")
@@ -55,8 +57,8 @@ public class BacklogController {
 
 
     @DeleteMapping("/{backlog_id}/{pt_id}")
-    public ResponseEntity<?> deleteProjectTask(@PathVariable String backlog_id, @PathVariable String pt_id){
-        projectTaskService.deletePTByProjectSequence(backlog_id, pt_id);
+    public ResponseEntity<?> deleteProjectTask(@PathVariable String backlog_id, @PathVariable long pt_id){
+        projectTaskService.deletePTByProjectID(backlog_id, pt_id);
 
         return new ResponseEntity<String>("Project Task "+pt_id+" was deleted successfully", HttpStatus.OK);
     }

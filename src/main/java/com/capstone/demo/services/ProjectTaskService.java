@@ -62,6 +62,15 @@ public class ProjectTaskService {
         return projectTask;
     }
 
+    public ProjectTask findPTByProjectID(String backlog_id, long pt_id){
+
+        Backlog backlog = backlogRepository.findByProjectIdentifier(backlog_id);
+        ProjectTask projectTask = projectTaskRepository.findById(pt_id);
+
+        return projectTask;
+    }
+
+
     public ProjectTask updateByProjectSequence(ProjectTask updatedTask, String backlog_id, String pt_id){
 
         ProjectTask projectTask = findPTByProjectSequence(backlog_id, pt_id);
@@ -70,8 +79,8 @@ public class ProjectTaskService {
     }
 
 
-    public void deletePTByProjectSequence(String backlog_id, String pt_id){
-        ProjectTask projectTask = findPTByProjectSequence(backlog_id, pt_id);
+    public void deletePTByProjectID(String backlog_id, long pt_id){
+        ProjectTask projectTask = findPTByProjectID(backlog_id, pt_id);
         projectTaskRepository.delete(projectTask);
     }
 

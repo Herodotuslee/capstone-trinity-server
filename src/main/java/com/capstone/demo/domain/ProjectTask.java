@@ -17,7 +17,7 @@ public class ProjectTask {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(updatable = false, unique = true)
+    @Column(updatable = false)
     private String projectSequence;
     @NotBlank(message = "Please include a project summary")
     private String summary;
@@ -35,10 +35,6 @@ public class ProjectTask {
 
     @Column(updatable = false)
     private String projectIdentifier;
-    @JsonFormat(pattern = "yyyy-mm-dd")
-    private Date create_At;
-    @JsonFormat(pattern = "yyyy-mm-dd")
-    private Date update_At;
 
     public ProjectTask() {
     }
