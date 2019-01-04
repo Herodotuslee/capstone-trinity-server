@@ -1,6 +1,6 @@
 
 
-insert into project values(101,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE','Project name1','2019-01-20');
+insert into project values(101,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE','Project name1');
 insert into project values(102,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE1','Project name1','2019-01-20');
 insert into project values(103,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE2','Project name1','2019-01-20');
 insert into project values(104,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE3','Project name1','2019-01-20');
@@ -11,10 +11,82 @@ insert into backlog values(103,0,'IEEE2',103);
 insert into backlog values(104,0,'IEEE3',104);
 insert into backlog values(105,0,'IEEE4',105);
 
-insert into project_task values(101,'crit','2019-01-01',1,'IEEE','IEEE-1','TO_DO','summary1','101');
-insert into project_task values(102,'crit','2019-01-01',1,'IEEE','IEEE-2','TO_DO','summary2','101');
-insert into project_task values(103,'crit','2019-01-01',1,'IEEE','IEEE-3','DOING','summary3','101');
-insert into project_task values(104,'crit','2019-01-01',1,'IEEE','IEEE-4','DOING','summary4','101');
-insert into project_task values(105,'crit','2019-01-01',1,'IEEE','IEEE-5','DONE','summary5','101');
+-- private Long id;
+--     private String projectSequence;
+--
+--     private String name;
+--     private String note;
+--     private String status;
+--     private Integer priority;
+--     private Date dueDate;
+--     private Backlog backlog;
+--
+--     private String projectIdentifier;
+
+insert into project_task values(101,'2019-01-01','TASK-1','note',1,'IEEE','IEEE-1','TODO',101);
+insert into project_task values(102,'2019-01-01','TASK-2','note',2,'IEEE','IEEE-2','DOING',101);
+insert into project_task values(103,'2019-01-01','TASK-3','note',2,'IEEE','IEEE-3','DOING',101);
+insert into project_task values(104,'2019-01-01','TASK-4','note',3,'IEEE','IEEE-4','DOING',101);
+insert into project_task values(105,'2019-01-01','TASK-5','note',1,'IEEE1','IEEE-5','DONE',101);
+insert into project_task values(106,'2019-01-01','TASK-1','note',1,'IEEE1','IEEE-1','TODO',101);
+insert into project_task values(107,'2019-01-01','TASK-2','note',2,'IEEE1','IEEE-2','DOING',101);
+insert into project_task values(108,'2019-01-01','TASK-3','note',2,'IEEE1','IEEE-3','DOING',101);
+insert into project_task values(109,'2019-01-01','TASK-4','note',3,'IEEE1','IEEE-4','DOING',101);
+insert into project_task values(110,'2019-01-01','TASK-5','note',1,'IEEE1','IEEE-5','DONE',101);
+-- insert into project_task values(102,'2019-01-01',1,'IEEE',10,'TO_DO',101,'Task','note');
+-- insert into project_task values(103,'2019-01-01',1,'IEEE','IEEE-3','DOING',101,'Task','note');
+-- insert into project_task values(104,'2019-01-01',1,'IEEE','IEEE-4','DOING',101,'Task','note');
+-- insert into project_task values(105,'2019-01-01',1,'IEEE','IEEE-5','DONE',101,'Task','note');
+
+
+insert into expense values(101,1,200,'2019-01-01','note');
+insert into expense values(102,2,400,'2019-01-01','note');
+insert into expense values(103,3,220,'2019-01-01','note');
+insert into expense values(104,4,120,'2019-01-01','note');
+insert into expense values(105,5,250,'2019-01-01','note');
+insert into expense values(106,6,300,'2019-01-01','note');
+insert into expense values(107,5,200,'2019-01-01','note');
+insert into expense values(108,1,200,'2019-02-01','note');
+insert into expense values(109,2,300,'2019-02-01','note');
+insert into expense values(110,3,200,'2019-02-01','note');
+insert into expense values(111,4,240,'2019-02-01','note');
+insert into expense values(112,5,200,'2019-03-01','note');
+insert into expense values(113,6,250,'2019-03-01','note');
+insert into expense values(114,5,200,'2019-03-01','note');
+insert into expense values(115,1,200,'2019-03-01','note');
+insert into expense values(116,2,450,'2019-03-01','note');
+insert into expense values(117,3,200,'2019-04-01','note');
+insert into expense values(118,4,260,'2019-04-01','note');
+insert into expense values(119,5,230,'2019-04-01','note');
+insert into expense values(120,6,240,'2019-05-01','note');
+insert into expense values(121,5,260,'2019-05-01','note');
+insert into expense values(122,1,200,'2019-05-01','note');
+insert into expense values(123,2,430,'2019-05-01','note');
+insert into expense values(124,3,230,'2019-06-01','note');
+insert into expense values(125,4,230,'2019-06-01','note');
+insert into expense values(126,5,200,'2019-06-01','note');
+insert into expense values(127,3,230,'2019-07-01','note');
+insert into expense values(128,5,200,'2019-07-01','note');
+insert into expense values(129,6,230,'2019-08-01','note');
+insert into expense values(130,5,200,'2019-08-01','note');
+insert into expense values(131,2,330,'2019-09-01','note');
+insert into expense values(132,5,200,'2019-09-01','note');
+insert into expense values(133,4,240,'2019-10-01','note');
+insert into expense values(134,4,200,'2019-10-01','note');
+insert into expense values(135,3,300,'2019-11-01','note');
+insert into expense values(136,5,240,'2019-11-01','note');
+insert into expense values(137,3,200,'2019-12-01','note');
+insert into expense values(138,6,300,'2019-12-01','note');
+insert into expense values(139,5,200,'2019-12-01','note');
+insert into expense values(140,4,100,'2019-12-01','note');
+insert into expense values(141,5,100,'2019-12-01','note');
+insert into expense values(142,6,240,'2019-12-01','note');
+insert into expense values(143,5,200,'2019-12-01','note');
+insert into expense values(144,5,200,'2019-11-01','note');
+insert into expense values(145,4,200,'2019-08-01','note');
+insert into expense values(146,4,500,'2019-10-01','note');
+insert into expense values(147,3,200,'2019-06-01','note');
+insert into expense values(148,2,240,'2019-07-01','note');
+insert into expense values(149,5,200,'2019-09-01','note');
 -- insert into project_task values(103,'crit','2019-01-01',1,'IEEE','IEEE-1','TO-DO','summary','101');
 -- insert into project_task values(104,'crit','2019-01-01',1,'IEEE','IEEE-1','TO-DO','summary','101');

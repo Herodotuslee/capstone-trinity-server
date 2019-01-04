@@ -3,6 +3,7 @@ package com.capstone.demo.controllers;
 
 import com.capstone.demo.domain.Project;
 //import com.capstone.demo.services.MapValidationErrorService;
+import com.capstone.demo.domain.ProjectTask;
 import com.capstone.demo.services.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,6 +38,10 @@ public class ProjectController {
 
     @GetMapping("/all")
     public Iterable<Project> getAllProjects(){return projectService.findAllProjects();}
+
+
+
+
 
     @DeleteMapping("/{projectId}")
     public ResponseEntity<?> deleteProject(@PathVariable String projectId){

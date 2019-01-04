@@ -14,4 +14,7 @@ public interface ProjectTaskRepository extends CrudRepository<ProjectTask, Long>
     ProjectTask findByProjectSequence(String sequence);
 
     ProjectTask findById(long id);
+
+    @Override
+    Iterable<ProjectTask> findAll();
 }

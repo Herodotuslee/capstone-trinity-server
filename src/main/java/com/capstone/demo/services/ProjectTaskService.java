@@ -84,4 +84,8 @@ public class ProjectTaskService {
         projectTaskRepository.delete(projectTask);
     }
 
+    public Iterable<ProjectTask> findAllProjectTasks(){
+        return projectTaskRepository.findAll();
+    }
+
 }

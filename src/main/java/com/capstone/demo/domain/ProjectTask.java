@@ -20,11 +20,11 @@ public class ProjectTask {
     @Column(updatable = false)
     private String projectSequence;
     @NotBlank(message = "Please include a project summary")
-    private String summary;
-    private String acceptanceCriteria;
+    private String name;
+    private String note;
     private String status;
     private Integer priority;
-    @JsonFormat(pattern = "yyyy-mm-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dueDate;
 
 

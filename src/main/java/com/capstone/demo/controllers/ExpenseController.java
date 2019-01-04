@@ -30,7 +30,7 @@ public class ExpenseController {
 
 
     @PostMapping("")
-    public ResponseEntity<?> createNewExpnse(@Valid @RequestBody Expense expense){
+    public ResponseEntity<?> createNewExpense(@Valid @RequestBody Expense expense){
         Expense expense1 = expenseService.updateExpense(expense);
         return new ResponseEntity<Expense>(expense1, HttpStatus.CREATED);
     }
@@ -40,5 +40,8 @@ public class ExpenseController {
        expenseService.deleteExpense(expenseId);
         return new ResponseEntity<String>("Project with ID: '"+expenseId+"' was deleted", HttpStatus.OK);
     }
+
+
+
     
 }

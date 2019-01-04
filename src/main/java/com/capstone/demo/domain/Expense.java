@@ -1,8 +1,10 @@
 package com.capstone.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Entity
@@ -15,9 +17,10 @@ public class Expense {
     private Integer cost;
     private String note;
 
+    private Integer category_id;
 
-
-    private String category_id;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date date;
 
 
     public Expense() {
