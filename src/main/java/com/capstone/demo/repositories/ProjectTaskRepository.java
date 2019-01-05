@@ -15,6 +15,7 @@ public interface ProjectTaskRepository extends CrudRepository<ProjectTask, Long>
 
     ProjectTask findById(long id);
 
+
     @Override
     Iterable<ProjectTask> findAll();
 }

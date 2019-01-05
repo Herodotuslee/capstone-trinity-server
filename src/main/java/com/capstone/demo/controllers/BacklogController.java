@@ -63,6 +63,15 @@ public class BacklogController {
         return new ResponseEntity<String>("Project Task "+pt_id+" was deleted successfully", HttpStatus.OK);
     }
 
+
+
+    @DeleteMapping("/{pt_id}")
+    public ResponseEntity<?> deleteProjectTask(@PathVariable long pt_id){
+        projectTaskService.deleteProjectTaskByID( pt_id);
+        return new ResponseEntity<String>("Project Task "+pt_id+" was deleted successfully", HttpStatus.OK);
+    }
+
+
     @GetMapping("/all")
     public Iterable<ProjectTask> getAllProjectTasks(){return projectTaskService.findAllProjectTasks();}
 

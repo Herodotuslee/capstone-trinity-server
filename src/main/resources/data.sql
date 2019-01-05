@@ -1,10 +1,10 @@
 
 
-insert into project values(101,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE','Project name1');
-insert into project values(102,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE1','Project name1','2019-01-20');
-insert into project values(103,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE2','Project name1','2019-01-20');
-insert into project values(104,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE3','Project name1','2019-01-20');
-insert into project values(105,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE4','Project name1','2019-01-20');
+insert into project values(101,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE','Project name1','2019-02-20');
+insert into project values(102,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE1','Project name1','2019-01-27');
+insert into project values(103,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE2','Project name1','2019-02-20');
+insert into project values(104,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-03-20','IEEE3','Project name1','2019-04-20');
+insert into project values(105,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE4','Project name1','2019-01-21');
 insert into backlog values(101,0,'IEEE',101);
 insert into backlog values(102,0,'IEEE1',102);
 insert into backlog values(103,0,'IEEE2',103);
@@ -23,21 +23,20 @@ insert into backlog values(105,0,'IEEE4',105);
 --
 --     private String projectIdentifier;
 
-insert into project_task values(101,'2019-01-01','TASK-1','note',1,'IEEE','IEEE-1','TODO',101);
-insert into project_task values(102,'2019-01-01','TASK-2','note',2,'IEEE','IEEE-2','DOING',101);
-insert into project_task values(103,'2019-01-01','TASK-3','note',2,'IEEE','IEEE-3','DOING',101);
-insert into project_task values(104,'2019-01-01','TASK-4','note',3,'IEEE','IEEE-4','DOING',101);
-insert into project_task values(105,'2019-01-01','TASK-5','note',1,'IEEE1','IEEE-5','DONE',101);
-insert into project_task values(106,'2019-01-01','TASK-1','note',1,'IEEE1','IEEE-1','TODO',101);
-insert into project_task values(107,'2019-01-01','TASK-2','note',2,'IEEE1','IEEE-2','DOING',101);
-insert into project_task values(108,'2019-01-01','TASK-3','note',2,'IEEE1','IEEE-3','DOING',101);
-insert into project_task values(109,'2019-01-01','TASK-4','note',3,'IEEE1','IEEE-4','DOING',101);
-insert into project_task values(110,'2019-01-01','TASK-5','note',1,'IEEE1','IEEE-5','DONE',101);
--- insert into project_task values(102,'2019-01-01',1,'IEEE',10,'TO_DO',101,'Task','note');
--- insert into project_task values(103,'2019-01-01',1,'IEEE','IEEE-3','DOING',101,'Task','note');
--- insert into project_task values(104,'2019-01-01',1,'IEEE','IEEE-4','DOING',101,'Task','note');
--- insert into project_task values(105,'2019-01-01',1,'IEEE','IEEE-5','DONE',101,'Task','note');
-
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(101,'2019-01-01','ProjectTask Styling','Note',1,true,'IEEE','IEEE-1','TODO',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(102,'2019-01-01','Calender ','havent start',1,true,'IEEE','IEEE-1','TODO',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(103,'2019-01-01','User','Hard',2,false,'IEEE','IEEE-1','DOING',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(104,'2019-01-01','NAME','Note',3,false,'IEEE','IEEE-1','DOING',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(105,'2019-01-01','NAME','Note',2,true,'IEEE','IEEE-1','DOING',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(106,'2019-02-01','NAME','Note',2,false,'IEEE','IEEE-1','TODO',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(107,'2018-03-01','NAME','Note',1,true,'IEEE','IEEE-1','DONE',102);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(108,'2018-04-01','CMU 231','Note',1,false,'IEEE','IEEE-1','DONE',102);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(109,'2018-05-04','Learn Spring boot','its hard',1,true,'IEEE','IEEE-1','DONE',102);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(110,'2018-06-20','IBM OA','PASS',2,true,'IEEE','IEEE-1','DONE',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(111,'2018-07-20','AMEX OA','PASS',2,false,'IEEE','IEEE-1','TODO',101);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(112,'2018-03-28','Angular','Note',1,true,'IEEE','IEEE-1','DONE',102);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(113,'2018-04-02','Java','Note',1,true,'IEEE','IEEE-1','DONE',102);
+insert into project_task (id,due_date,name,note,priority,important,project_identifier,project_sequence,status,backlog_id) values(114,'2018-12-25','OOP','Note',1,true,'IEEE','IEEE-1','DONE',102);
 
 insert into expense values(101,1,200,'2019-01-01','note');
 insert into expense values(102,2,400,'2019-01-01','note');

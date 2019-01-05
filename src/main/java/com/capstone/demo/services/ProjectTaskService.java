@@ -38,7 +38,7 @@ public class ProjectTaskService {
             projectTask.setProjectSequence(backlog.getProjectIdentifier()+"-"+BacklogSequence);
             projectTask.setProjectIdentifier(projectIdentifier);
             if(projectTask.getStatus()==""|| projectTask.getStatus()==null){
-                projectTask.setStatus("TO_DO");
+                projectTask.setStatus("TODO");
             }
 
             if(projectTask.getPriority()== null||projectTask.getPriority()==0){
@@ -82,6 +82,10 @@ public class ProjectTaskService {
     public void deletePTByProjectID(String backlog_id, long pt_id){
         ProjectTask projectTask = findPTByProjectID(backlog_id, pt_id);
         projectTaskRepository.delete(projectTask);
+    }
+
+    public void deleteProjectTaskByID(long pt_id){
+        projectTaskRepository.deleteById(pt_id);
     }
 
     public Iterable<ProjectTask> findAllProjectTasks(){
