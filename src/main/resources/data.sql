@@ -1,10 +1,10 @@
 
 
-insert into project values(101,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE','Project name1','2019-02-20');
-insert into project values(102,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE1','Project name1','2019-01-27');
-insert into project values(103,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE2','Project name1','2019-02-20');
-insert into project values(104,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-03-20','IEEE3','Project name1','2019-04-20');
-insert into project values(105,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-20','IEEE4','Project name1','2019-01-21');
+insert into project values(101,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-21','IEEE','Expense Tracker','2019-01-20');
+insert into project values(102,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-30','IEEE1','TodoList ','2019-01-27');
+insert into project values(103,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-02-21','IEEE2','Block Chain','2019-02-20');
+insert into project values(104,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-04-27','IEEE3','Capstone project','2019-04-20');
+insert into project values(105,'Some quick example text to build on the card title and make up the bulk of the cards content.','2019-01-28','IEEE4','Project Management tool','2019-01-21');
 insert into backlog values(101,0,'IEEE',101);
 insert into backlog values(102,0,'IEEE1',102);
 insert into backlog values(103,0,'IEEE2',103);

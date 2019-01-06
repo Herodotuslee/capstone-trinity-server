@@ -21,10 +21,17 @@ public class Expense {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date date;
+//    private Date created_At;
 
 
     public Expense() {
     }
+
+//    @PrePersist
+//    protected void onCreate(){
+//        this.created_At = new Date();
+//    }
+
 
 
 
